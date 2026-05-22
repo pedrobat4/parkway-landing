@@ -16,7 +16,7 @@ export default function Footer() {
           <img
             src={logoManziBrancaUrl}
             alt="Manzi Construtora"
-            className="h-24 md:h-28 w-auto mb-6"
+            className="h-16 md:h-20 w-auto mb-4 -ml-1"
           />
           <p className="text-white/60 text-sm leading-relaxed max-w-md">
             Park Way Residencial — um empreendimento Manzi. Arquitetura

@@ -18,7 +18,7 @@ export default function ConstructionStatus() {
         <SectionTitle
           eyebrow="Acompanhe"
           title={<>Evolução <span className="gold-text">de obras.</span></>}
-          subtitle="Transparência total no andamento da construção. Em breve atualizaremos com fotos e o percentual de cada etapa."
+          subtitle="Fique por dentro do andamento das obras do Park Way."
         />
 
         <div ref={ref} className="reveal grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
