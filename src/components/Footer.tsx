@@ -11,12 +11,12 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-graphite-900 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-5 md:px-10 py-16 grid md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 py-10 md:py-12 grid md:grid-cols-4 gap-8 md:gap-10">
         <div className="md:col-span-2">
           <img
             src={logoManziBrancaUrl}
             alt="Manzi Construtora"
-            className="h-16 md:h-20 w-auto mb-4 -ml-1"
+            className="h-24 md:h-32 w-auto mb-4 -ml-1"
           />
           <p className="text-white/60 text-sm leading-relaxed max-w-md">
             Park Way Residencial — um empreendimento Manzi. Arquitetura
@@ -65,9 +65,8 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-5 md:px-10 py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/40">
+        <div className="max-w-7xl mx-auto px-5 md:px-10 py-4 text-xs text-white/40">
           <p>© {new Date().getFullYear()} Manzi Construtora. Todos os direitos reservados.</p>
-          <p>Imagens meramente ilustrativas.</p>
         </div>
       </div>
     </footer>
