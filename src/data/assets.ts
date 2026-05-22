@@ -6,6 +6,8 @@ export const logoUrl = `${BASE}/logos/logo-parkway.png`;
 export const logoManziUrl = `${BASE}/logos/logo-manzi.png`;
 export const logoManziBrancaUrl = `${BASE}/logos/logo-manzi-branca.png`;
 
+// Hero usa imagem estática da fachada (mais leve que o .MOV)
+export const heroImageUrl = `${BASE}/fachada/Fachada-04.webp`;
 export const heroVideoUrl = 'https://storage.lucasmendes.dev/avaloon/manzilp/hero-video.MOV';
 
 export const apartmentImages = [

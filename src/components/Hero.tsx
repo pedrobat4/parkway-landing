@@ -1,17 +1,15 @@
 import { ChevronDown } from 'lucide-react';
-import { heroVideoUrl } from '../data/assets';
+import { heroImageUrl } from '../data/assets';
 
 export default function Hero() {
   return (
     <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden">
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideoUrl}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
+      <img
+        className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+        src={heroImageUrl}
+        alt="Park Way Residencial — Fachada"
+        loading="eager"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-graphite-700/70 via-graphite-700/40 to-graphite-700/90" />
       <div className="absolute inset-0 bg-graphite-700/30" />
