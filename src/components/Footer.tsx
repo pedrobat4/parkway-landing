@@ -16,7 +16,7 @@ export default function Footer() {
           <img
             src={logoManziBrancaUrl}
             alt="Manzi Construtora"
-            className="h-24 md:h-32 w-auto mb-4 -ml-1"
+            className="h-24 md:h-32 w-auto -ml-1 block -mb-6 md:-mb-8"
           />
           <p className="text-white/60 text-sm leading-relaxed max-w-md">
             Park Way Residencial — um empreendimento Manzi. Arquitetura
@@ -34,7 +34,7 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-3 text-white/70 hover:text-gold transition-colors">
               <Mail size={16} className="mt-0.5 text-gold flex-shrink-0" />
-              <a href="mailto:contato@manzi.com.br">contato@manzi.com.br</a>
+              <a href="mailto:construtoramanzi@gmail.com">construtoramanzi@gmail.com</a>
             </li>
             <li className="flex items-start gap-3 text-white/70">
               <MapPin size={16} className="mt-0.5 text-gold flex-shrink-0" />
