@@ -54,7 +54,7 @@ export default function Location() {
           <div className="lg:col-span-2 flex flex-col justify-between">
             <div className="space-y-1 mb-6">
               <p className="text-gold text-[11px] tracking-[0.3em] uppercase">Endereço</p>
-              <p className="font-serif text-2xl md:text-3xl text-white">
+              <p className="font-sans text-2xl md:text-3xl text-white font-light tracking-tight">
                 {ADDRESS_LINE_1}
               </p>
               <p className="text-white/70">{ADDRESS_LINE_2}</p>

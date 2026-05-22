@@ -1,8 +1,9 @@
-import { Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Facebook, Mail, MapPin } from 'lucide-react';
+import WhatsAppIcon from './icons/WhatsAppIcon';
 import {
   logoManziBrancaUrl,
   PHONE_DISPLAY,
-  PHONE_TEL,
+  WHATSAPP_URL,
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
 } from '../data/assets';
@@ -15,7 +16,7 @@ export default function Footer() {
           <img
             src={logoManziBrancaUrl}
             alt="Manzi Construtora"
-            className="h-12 w-auto mb-6"
+            className="h-24 md:h-28 w-auto mb-6"
           />
           <p className="text-white/60 text-sm leading-relaxed max-w-md">
             Park Way Residencial — um empreendimento Manzi. Arquitetura
@@ -28,8 +29,8 @@ export default function Footer() {
           <h4 className="text-gold text-[10px] tracking-[0.3em] uppercase mb-5">Contato</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3 text-white/70 hover:text-gold transition-colors">
-              <Phone size={16} className="mt-0.5 text-gold flex-shrink-0" />
-              <a href={PHONE_TEL}>{PHONE_DISPLAY}</a>
+              <WhatsAppIcon size={16} className="mt-0.5 text-gold flex-shrink-0" />
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">{PHONE_DISPLAY}</a>
             </li>
             <li className="flex items-start gap-3 text-white/70 hover:text-gold transition-colors">
               <Mail size={16} className="mt-0.5 text-gold flex-shrink-0" />

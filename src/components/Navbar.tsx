@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
-import { logoUrl, PHONE_DISPLAY, PHONE_TEL } from '../data/assets';
+import { Menu, X } from 'lucide-react';
+import WhatsAppIcon from './icons/WhatsAppIcon';
+import { logoUrl, PHONE_DISPLAY, WHATSAPP_URL } from '../data/assets';
 
 const links = [
   { label: 'O Empreendimento', href: '#diferenciais' },
@@ -52,10 +53,12 @@ export default function Navbar() {
         </nav>
 
         <a
-          href={PHONE_TEL}
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noreferrer"
           className="hidden lg:inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-graphite-700 px-5 py-2.5 text-sm tracking-wider uppercase transition-all duration-300"
         >
-          <Phone size={14} /> {PHONE_DISPLAY}
+          <WhatsAppIcon size={14} /> {PHONE_DISPLAY}
         </a>
 
         <button
@@ -81,11 +84,13 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href={PHONE_TEL}
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 text-center border border-gold text-gold px-5 py-3 text-sm tracking-wider uppercase"
+              className="mt-2 inline-flex items-center justify-center gap-2 text-center border border-gold text-gold px-5 py-3 text-sm tracking-wider uppercase"
             >
-              {PHONE_DISPLAY}
+              <WhatsAppIcon size={14} /> {PHONE_DISPLAY}
             </a>
           </div>
         </div>

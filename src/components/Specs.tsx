@@ -54,7 +54,7 @@ export default function Specs() {
               <div className="absolute inset-0 bg-gradient-to-t from-graphite-900/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="text-gold text-[10px] tracking-[0.3em] uppercase">Park Way Residencial</p>
-                <p className="text-white font-serif text-2xl mt-1">{ADDRESS_LINE_1}</p>
+                <p className="text-white font-sans text-xl md:text-2xl font-light mt-1">{ADDRESS_LINE_1}</p>
                 <p className="text-white/70 text-sm">{ADDRESS_LINE_2}</p>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function Specs() {
                 <div key={label} className="bg-graphite-700 p-6 md:p-8">
                   <Icon className="text-gold mb-4" size={26} strokeWidth={1.3} />
                   <p className="text-[10px] tracking-[0.3em] uppercase text-white/50 mb-2">{label}</p>
-                  <p className="font-serif text-xl md:text-2xl text-white">{value}</p>
+                  <p className="font-sans text-lg md:text-xl text-white font-light tracking-tight">{value}</p>
                 </div>
               ))}
             </div>
@@ -80,10 +80,10 @@ export default function Specs() {
                     className="flex items-center justify-between border-b border-white/10 pb-3 group hover:border-gold transition-colors"
                   >
                     <div className="flex items-center gap-4">
-                      <span className="text-gold font-serif text-2xl w-10">{t.qty}</span>
+                      <span className="text-gold font-sans text-xl md:text-2xl font-medium w-10">{t.qty}</span>
                       <span className="text-white/85 text-sm md:text-base">{t.label}</span>
                     </div>
-                    <span className="font-serif text-xl md:text-2xl text-white">{t.area}</span>
+                    <span className="font-sans text-lg md:text-xl text-white font-light tracking-tight">{t.area}</span>
                   </div>
                 ))}
               </div>

@@ -1,5 +1,6 @@
-import { Phone, CalendarCheck, ArrowUpRight } from 'lucide-react';
-import { facadeImages, PHONE_DISPLAY, PHONE_TEL } from '../data/assets';
+import { CalendarCheck, ArrowUpRight } from 'lucide-react';
+import WhatsAppIcon from './icons/WhatsAppIcon';
+import { facadeImages, PHONE_DISPLAY, WHATSAPP_URL } from '../data/assets';
 import { useReveal } from '../hooks/useReveal';
 
 export default function FinalCTA() {
@@ -29,17 +30,21 @@ export default function FinalCTA() {
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href={PHONE_TEL}
+            href={`${WHATSAPP_URL}?text=${encodeURIComponent('Olá, gostaria de agendar uma visita ao Park Way Residencial.')}`}
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex items-center justify-center gap-3 bg-gold text-graphite-700 px-8 py-4 text-sm tracking-[0.2em] uppercase font-medium hover:bg-gold-400 transition-all duration-300"
           >
             <CalendarCheck size={18} /> Agende uma Visita
             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </a>
           <a
-            href={PHONE_TEL}
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center gap-3 border border-white/40 text-white px-8 py-4 text-sm tracking-[0.2em] uppercase hover:border-gold hover:text-gold transition-all duration-300"
           >
-            <Phone size={18} /> {PHONE_DISPLAY}
+            <WhatsAppIcon size={18} /> {PHONE_DISPLAY}
           </a>
         </div>
       </div>

@@ -55,9 +55,11 @@ export const planImages = [
   { src: `${BASE}/planta-baixa/Planta%20Baixa%20Subsolo.webp`, title: 'Subsolo' },
 ];
 
-// Contato (fixo Manzi)
+// Contato (fixo Manzi) — botões redirecionam pro WhatsApp
 export const PHONE_DISPLAY = '(38) 2100-3431';
-export const PHONE_TEL = 'tel:+553821003431';
+export const WHATSAPP_URL = 'https://wa.me/553821003431';
+// Mantém-se exportado pra compat, mas todos os botões agora usam WHATSAPP_URL
+export const PHONE_TEL = WHATSAPP_URL;
 
 // Endereço
 export const ADDRESS_LINE_1 = 'Rua Honorato Campos, 51';
