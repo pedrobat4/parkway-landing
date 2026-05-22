@@ -134,7 +134,7 @@ export default function Gallery() {
                   <p className="text-gold text-[10px] md:text-xs tracking-[0.3em] sm:tracking-[0.35em] uppercase mb-1.5 sm:mb-2">
                     {String(index + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
                   </p>
-                  <h3 className="font-serif text-lg sm:text-2xl md:text-4xl text-white leading-tight truncate sm:whitespace-normal">
+                  <h3 className="font-sans text-lg sm:text-2xl md:text-4xl text-white font-light tracking-tight leading-tight truncate sm:whitespace-normal">
                     {images[index].title}
                   </h3>
                 </div>

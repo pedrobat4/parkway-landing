@@ -41,7 +41,7 @@ export default function Differentials() {
               className="group bg-graphite-700 p-8 md:p-10 hover:bg-graphite-600 transition-colors duration-500"
             >
               <Icon className="text-gold mb-6 group-hover:scale-110 transition-transform duration-500" size={32} strokeWidth={1.2} />
-              <h3 className="font-serif text-2xl text-white mb-3">{title}</h3>
+              <h3 className="font-sans text-xl md:text-2xl text-white font-light tracking-tight mb-3">{title}</h3>
               <p className="text-sm text-white/65 leading-relaxed">{desc}</p>
             </div>
           ))}
