@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Asgard';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/AsgardTrial-Light.ttf') format('truetype');
+  unicode-range: U+0000-002F, U+003A-FFFF;
+}
+
+@font-face {
+  font-family: 'Asgard';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/AsgardTrial-Regular.ttf') format('truetype');
+  unicode-range: U+0000-002F, U+003A-FFFF;
+}
+
+@font-face {
+  font-family: 'Asgard';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/AsgardTrial-Medium.ttf') format('truetype');
+  unicode-range: U+0000-002F, U+003A-FFFF;
+}
+
+@font-face {
+  font-family: 'Asgard';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/AsgardTrial-Bold.ttf') format('truetype');
+  unicode-range: U+0000-002F, U+003A-FFFF;
+}
+
+@font-face {
+  font-family: 'Asgard';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/AsgardTrial-Xbold.ttf') format('truetype');
+  unicode-range: U+0000-002F, U+003A-FFFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-graphite-500 text-white font-sans antialiased;
+    line-height: 1.5;
+  }
+  h1, h2, h3, h4 {
+    line-height: 1.15;
+    letter-spacing: 0.005em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gold-line {
+    background: linear-gradient(90deg, transparent, #C9A961, transparent);
+  }
+  .gold-text {
+    background: linear-gradient(135deg, #e6cd8a 0%, #C9A961 50%, #a88a44 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,74 @@
+import { Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import {
+  logoManziBrancaUrl,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_2,
+} from '../data/assets';
+
+export default function Footer() {
+  return (
+    <footer className="bg-graphite-900 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 py-16 grid md:grid-cols-4 gap-10">
+        <div className="md:col-span-2">
+          <img
+            src={logoManziBrancaUrl}
+            alt="Manzi Construtora"
+            className="h-12 w-auto mb-6"
+          />
+          <p className="text-white/60 text-sm leading-relaxed max-w-md">
+            Park Way Residencial — um empreendimento Manzi. Arquitetura
+            contemporânea, lazer completo e localização privilegiada em
+            Montes Claros / MG.
+          </p>
+        </div>
+
+        <div>
+          <h4 className="text-gold text-[10px] tracking-[0.3em] uppercase mb-5">Contato</h4>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-start gap-3 text-white/70 hover:text-gold transition-colors">
+              <Phone size={16} className="mt-0.5 text-gold flex-shrink-0" />
+              <a href={PHONE_TEL}>{PHONE_DISPLAY}</a>
+            </li>
+            <li className="flex items-start gap-3 text-white/70 hover:text-gold transition-colors">
+              <Mail size={16} className="mt-0.5 text-gold flex-shrink-0" />
+              <a href="mailto:contato@manzi.com.br">contato@manzi.com.br</a>
+            </li>
+            <li className="flex items-start gap-3 text-white/70">
+              <MapPin size={16} className="mt-0.5 text-gold flex-shrink-0" />
+              <span>{ADDRESS_LINE_1}<br />{ADDRESS_LINE_2}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-gold text-[10px] tracking-[0.3em] uppercase mb-5">Siga-nos</h4>
+          <div className="flex gap-3">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="border border-white/15 hover:border-gold hover:text-gold text-white/70 p-3 transition-colors"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="border border-white/15 hover:border-gold hover:text-gold text-white/70 p-3 transition-colors"
+            >
+              <Facebook size={18} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-5 md:px-10 py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/40">
+          <p>© {new Date().getFullYear()} Manzi Construtora. Todos os direitos reservados.</p>
+          <p>Imagens meramente ilustrativas.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
