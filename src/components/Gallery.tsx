@@ -36,6 +36,18 @@ export default function Gallery() {
   const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
   const next = () => setIndex((i) => (i + 1) % images.length);
 
+  // Preload vizinhos pra navegação ficar instantânea, sem manter no DOM
+  useEffect(() => {
+    const neighbors = [
+      images[(index + 1) % images.length],
+      images[(index - 1 + images.length) % images.length],
+    ];
+    neighbors.forEach((img) => {
+      const i = new Image();
+      i.src = img.src;
+    });
+  }, [index, images]);
+
   const touchStartX = useRef<number | null>(null);
   const touchDeltaX = useRef(0);
   const onTouchStart = (e: React.TouchEvent) => {
@@ -104,24 +116,15 @@ export default function Gallery() {
               onTouchMove={onTouchMove}
               onTouchEnd={onTouchEnd}
             >
-              {images.map((img, i) => (
-                <div
-                  key={img.src}
-                  className={`absolute inset-0 transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    i === index
-                      ? 'opacity-100 scale-100'
-                      : 'opacity-0 scale-[1.03] pointer-events-none'
-                  }`}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.title}
-                    className="w-full h-full object-cover"
-                    loading={i === 0 ? 'eager' : 'lazy'}
-                    draggable={false}
-                  />
-                </div>
-              ))}
+              <img
+                key={images[index].src}
+                src={images[index].src}
+                alt={images[index].title}
+                className="absolute inset-0 w-full h-full object-cover animate-fade-in"
+                loading="eager"
+                decoding="async"
+                draggable={false}
+              />
 
               <div className="absolute inset-0 bg-gradient-to-t from-graphite-900/90 via-graphite-900/20 to-transparent pointer-events-none" />
 
