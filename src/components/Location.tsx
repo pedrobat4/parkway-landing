@@ -9,10 +9,40 @@ import {
 } from '../data/assets';
 
 const nearby = [
-  { icon: ShoppingBag, label: 'Shopping & Comércio', desc: 'Centros comerciais a poucos minutos.' },
-  { icon: GraduationCap, label: 'Escolas e Faculdades', desc: 'Instituições de ensino renomadas no entorno.' },
-  { icon: HeartPulse, label: 'Saúde', desc: 'Hospitais e clínicas de referência próximos.' },
-  { icon: Trees, label: 'Áreas Verdes', desc: 'Parques e praças para o lazer da família.' },
+  {
+    icon: ShoppingBag,
+    label: 'Shopping & Mercado',
+    places: [
+      { name: 'Supermercado BH', dist: '1,4 km', time: '3 min' },
+      { name: 'Mart Minas', dist: '3,2 km', time: '5 min' },
+      { name: 'Montes Claros Shopping', dist: '2,8 km', time: '6 min' },
+      { name: 'IBI Shopping', dist: '3 km', time: '7 min' },
+    ],
+  },
+  {
+    icon: GraduationCap,
+    label: 'Educação',
+    places: [
+      { name: 'Colégio Adventista', dist: '200 m', time: '1 min' },
+      { name: 'Colégio Ícone', dist: '1,5 km', time: '3 min' },
+    ],
+  },
+  {
+    icon: HeartPulse,
+    label: 'Saúde',
+    places: [
+      { name: 'Drogasil', dist: '500 m', time: '1 min' },
+      { name: 'Minas Brasil', dist: '1 km', time: '2 min' },
+    ],
+  },
+  {
+    icon: Trees,
+    label: 'Áreas Verdes',
+    places: [
+      { name: 'Parque Municipal', dist: '850 m', time: '2 min' },
+      { name: 'Parque Sagarana', dist: '3 km', time: '7 min' },
+    ],
+  },
 ];
 
 const mapsEmbed = MAPS_EMBED_URL;
@@ -51,8 +81,8 @@ export default function Location() {
             </a>
           </div>
 
-          <div className="lg:col-span-2 flex flex-col justify-between">
-            <div className="space-y-1 mb-6">
+          <div className="lg:col-span-2 flex flex-col">
+            <div className="space-y-1 mb-8">
               <p className="text-gold text-[11px] tracking-[0.3em] uppercase">Endereço</p>
               <p className="font-sans text-2xl md:text-3xl text-white font-light tracking-tight">
                 {ADDRESS_LINE_1}
@@ -60,17 +90,29 @@ export default function Location() {
               <p className="text-white/70">{ADDRESS_LINE_2}</p>
             </div>
 
-            <div className="space-y-4">
-              {nearby.map(({ icon: Icon, label, desc }) => (
+            <div className="space-y-5">
+              {nearby.map(({ icon: Icon, label, places }) => (
                 <div
                   key={label}
-                  className="flex items-start gap-4 border-l-2 border-gold/40 hover:border-gold pl-5 py-2 transition-colors"
+                  className="border-l-2 border-gold/40 hover:border-gold pl-5 transition-colors"
                 >
-                  <Icon className="text-gold mt-1 flex-shrink-0" size={22} strokeWidth={1.3} />
-                  <div>
+                  <div className="flex items-center gap-3 mb-2.5">
+                    <Icon className="text-gold flex-shrink-0" size={20} strokeWidth={1.3} />
                     <p className="text-white text-sm md:text-base font-medium">{label}</p>
-                    <p className="text-white/60 text-xs md:text-sm mt-1">{desc}</p>
                   </div>
+                  <ul className="space-y-1.5">
+                    {places.map((place) => (
+                      <li
+                        key={place.name}
+                        className="flex items-baseline justify-between gap-3 text-xs md:text-sm"
+                      >
+                        <span className="text-white/75">{place.name}</span>
+                        <span className="text-white/45 whitespace-nowrap tabular-nums">
+                          {place.dist} · {place.time}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>

@@ -11,9 +11,8 @@ export default function WhatsAppButton() {
       className="fixed bottom-6 right-6 z-40 group"
     >
       <span className="absolute inset-0 rounded-full bg-gold/30 animate-ping" />
-      <span className="relative flex items-center gap-3 bg-gold text-graphite-700 pl-4 pr-5 py-3.5 rounded-full shadow-2xl shadow-black/30 hover:bg-gold-400 transition-colors">
-        <WhatsAppIcon size={22} />
-        <span className="hidden sm:inline text-sm font-medium tracking-wide">{PHONE_DISPLAY}</span>
+      <span className="relative flex items-center justify-center bg-gold text-graphite-700 p-4 rounded-full shadow-2xl shadow-black/30 hover:bg-gold-400 transition-colors">
+        <WhatsAppIcon size={26} />
       </span>
     </a>
   );

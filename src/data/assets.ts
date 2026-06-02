@@ -62,9 +62,9 @@ export const WHATSAPP_URL = 'https://wa.me/553821003431';
 export const PHONE_TEL = WHATSAPP_URL;
 
 // Endereço
-export const ADDRESS_LINE_1 = 'Rua Honorato Campos, 51';
+export const ADDRESS_LINE_1 = 'Rua Honorato Campos, 1165';
 export const ADDRESS_LINE_2 = 'Morada do Sol · Montes Claros / MG';
-export const ADDRESS_FULL = 'Rua Honorato Campos, 51, Morada do Sol, Montes Claros - MG';
+export const ADDRESS_FULL = 'Rua Honorato Campos, 1165, Morada do Sol, Montes Claros - MG';
 
 // Coordenadas exatas do pin (do Maps enviado pelo cliente)
 export const MAP_LAT = -16.746222;
