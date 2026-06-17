@@ -1,7 +1,7 @@
 export const BASE = '/images';
 
 // Park Way logo (header/navbar/hero)
-export const logoUrl = `${BASE}/logos/logo-parkway.png`;
+export const logoUrl = `${BASE}/logos/logo-manzi-branca.svg`;
 // Manzi logo (footer / fim da página)
 export const logoManziUrl = `${BASE}/logos/logo-manzi.png`;
 export const logoManziBrancaUrl = `${BASE}/logos/logo-manzi-branca.svg`;
