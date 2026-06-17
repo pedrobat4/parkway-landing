@@ -34,7 +34,7 @@ export default function Navbar() {
           <img
             src={logoUrl}
             alt="Park Way Residencial"
-            className="h-9 md:h-10 w-auto invert brightness-0 contrast-200"
+            className="h-7 md:h-8 w-auto invert brightness-0 contrast-200"
             style={{ filter: 'brightness(0) invert(1)' }}
           />
         </a>
