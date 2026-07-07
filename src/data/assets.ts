@@ -4,7 +4,8 @@ export const BASE = '/images';
 export const logoUrl = `${BASE}/logos/logo-manzi-branca.svg`;
 // Manzi logo (footer / fim da página)
 export const logoManziUrl = `${BASE}/logos/logo-manzi.png`;
-export const logoManziBrancaUrl = `${BASE}/logos/logo-manzi-branca.svg`;
+// Footer: logo Manzi branca (mantida) — não confundir com o lockup Park Way do header
+export const logoManziBrancaUrl = `${BASE}/logos/logo-manzi-branca.png`;
 
 // Hero usa imagem estática da fachada (mais leve que o .MOV)
 export const heroImageUrl = `${BASE}/fachada/Fachada-04.webp`;
