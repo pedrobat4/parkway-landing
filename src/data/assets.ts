@@ -46,6 +46,13 @@ export const garageImages = [
   { src: `${BASE}/areacomun/Box%20Garagem.webp`, title: 'Garagem + Box Privativo' },
 ];
 
+// Evolução de obra — registro fotográfico (drone). Capa = foto 3.
+export const obraImages = [
+  { src: `${BASE}/obra/junho-03.webp`, title: 'Evolução da Obra — Junho / 2026' },
+  { src: `${BASE}/obra/junho-01.webp`, title: 'Evolução da Obra — Junho / 2026' },
+  { src: `${BASE}/obra/junho-02.webp`, title: 'Evolução da Obra — Junho / 2026' },
+];
+
 export const planImages = [
   { src: `${BASE}/planta-baixa/Planta-3Q-103.webp`, title: '3 Quartos — 103 m²' },
   { src: `${BASE}/planta-baixa/Planta%203Q.webp`, title: '3 Quartos — 110 m²' },
