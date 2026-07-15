@@ -5,12 +5,12 @@ import Lightbox from './Lightbox';
 import { obraImages } from '../data/assets';
 import { useReveal } from '../hooks/useReveal';
 
-const overallProgress = 0;
-const deliveryDate = 'Dez • 2028';
+const overallProgress = 18;
+const deliveryDate = 'Set • 2030';
 const currentPhase = 'Junho / 2026';
 
 const stages = [
-  { label: 'Contenção / Fundações', progress: 0 },
+  { label: 'Contenção / Fundações', progress: 100 },
   { label: 'Superestrutura', progress: 0 },
   { label: 'Alvenaria', progress: 0 },
   { label: 'Instalações', progress: 0 },
